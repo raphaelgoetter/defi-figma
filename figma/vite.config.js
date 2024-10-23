@@ -6,5 +6,8 @@ import UnoCSS from 'unocss/vite'
 
 export default defineConfig({
   // config options
+  build: {
+    outDir: 'docs', // répertoire de sortie
+  },
   plugins: [UnoCSS()],
 })
