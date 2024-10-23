@@ -1,0 +1,81 @@
+/* Global styles */
+body {
+  display: grid;
+  place-content: center;
+  background-color: var(--colors-pink-100);
+  color: var(--colors-black); /* couleur manquante dans l'UI-Kit */
+}
+
+/* Card */
+.card {
+  display: grid;
+  gap: var(--spacing-16);
+  width: 364px; /* ??? */
+  padding: var(--spacing-16);
+  background-color: var(--colors-white); /* couleur manquante dans l'UI-Kit */
+  border: 1px solid var(--colors-pink-700); /* pink-600 est demandé sur la card mais n'existe pas */
+  border-radius: var(--border-radius-2xl);
+}
+.card-subtitle {
+  margin: 0;
+  font-size: var(--font-size-16);
+  line-height: var(--line-height-24);
+  color: var(--colors-gray-500);
+}
+.card-title {
+  margin: 0;
+  font-family: var(
+    --font-family-opensans
+  ); /* Poppins sur la card, mais pas sur l'UI-Kit */
+  font-size: var(--font-size-36);
+  line-height: var(--line-height-40);
+  font-weight: var(--font-weight-semibold);
+  color: var(
+    --colors-pink-700
+  ); /* pink-600 est demandé sur la card mais n'existe pas */
+}
+.card-media {
+  aspect-ratio: 1;
+}
+.card-desc p {
+  margin: 0;
+  line-height: var(--line-height-24);
+}
+.card-footer {
+  display: flex;
+  justify-content: end;
+  gap: var(--spacing-8);
+}
+
+/* Buttons */
+.button {
+  display: inline-grid;
+  grid-auto-flow: column;
+  gap: var(--spacing-4);
+  padding: var(--spacing-16) var(--spacing-24);
+  font-family: var(
+    --font-family-opensans
+  ); /* Poppins sur la card, mais pas sur l'UI-Kit */
+  font-size: inherit;
+  line-height: var(--line-height-24);
+  border: none;
+  background: none;
+  border-radius: var(--border-radius-full);
+  cursor: pointer;
+
+  &:active {
+    scale: 0.98;
+  }
+}
+.button-primary {
+  background-color: var(--colors-pink-100);
+  color: var(--colors-gray-900);
+  border: 1px solid transparent;
+}
+.button-secondary {
+  background-color: var(--colors-white); /* couleur manquante dans l'UI-Kit */
+  color: var(
+    --colors-pink-700
+  ); /* pink-600 est demandé sur la card mais n'existe pas */
+  border: 1px solid var(--colors-pink-700); /* pink-600 est demandé sur la card mais n'existe pas */
+}
